@@ -1,0 +1,11 @@
+.content-body{
+  min-height: 130vh;
+  background-color: white;
+  margin: 0 25px;
+}
+
+.card{
+  padding: 15px 50px;
+  background-color: white;
+  border-bottom: 1px solid rgb(175, 175, 175);
+}

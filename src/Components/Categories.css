@@ -1,0 +1,33 @@
+.Categories{
+  width: 100%;
+}
+
+.Categories a{
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.Categories a:hover{
+  color: darkgrey;
+  transition: .5s;
+}
+
+.More-Categories{
+  padding: 10px 15px;
+  border-radius: 50px;
+  outline: none;
+  width: 75px;
+  border: 1px solid #99004a;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #99004a;
+  color: #ffb300;
+  cursor: pointer;
+}
+
+.More-Categories:hover{
+  border: 1px solid #99004a;
+  color: #99004a;
+  background-color: transparent;
+  transition: .5s;
+}
