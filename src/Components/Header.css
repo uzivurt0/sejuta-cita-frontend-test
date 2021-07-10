@@ -18,7 +18,7 @@
 }
 
 .Nav{
-  width: 100%;
+  height: 48px;
 }
 
 /* .More-Categories{
@@ -34,7 +34,7 @@
   position: fixed;
   animation: moveDown 0.5s ease-in-out;
   box-shadow: 0 0 12px rgba(105, 105, 105);
-  border-radius: 0 0 25px 25px;
+  border-radius: 0 0 5px 5px;
 }
 
 

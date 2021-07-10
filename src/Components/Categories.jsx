@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Categories.css';
+import Body from './Body';
 
 class Categories extends Component{
   state = {
@@ -10,8 +11,8 @@ class Categories extends Component{
     try{
       const res = await fetch('API.json');
       const data = await res.json();
-      const category = data.result.categories;
-      this.setState({category : category.splice(0,3)});
+      const category = data.result.categoryList;
+      this.setState({category : category});
       console.log(category);
     } catch(err){
       console.log(err);
@@ -27,8 +28,6 @@ class Categories extends Component{
             return <a key={item.id}>{item.name}</a>
           })
         }
-        
-        <a><button className="More-Categories">More</button></a>
       </div>
     )
   }

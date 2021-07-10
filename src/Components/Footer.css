@@ -1,0 +1,11 @@
+.Footer{
+  padding: 25px;
+  background-color: lightgrey;
+  text-align: center;
+  color :rgb(143, 143, 143);
+}
+
+.Footer p{
+  text-transform: uppercase;
+  font-weight: 600;
+}
