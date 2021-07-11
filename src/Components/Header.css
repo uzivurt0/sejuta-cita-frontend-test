@@ -1,6 +1,6 @@
 .Header{
   max-width: 768px;
-  padding: 12px 0px;
+  padding: 5px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,17 +8,26 @@
   background-color: white;
 }
 
-.Logo{
-  width: 100%;
+.upperSectionNavbar{
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  padding: 0 12px;
+}
+
+.upperSectionNavbar img{
+  width: 75px;
   height: auto;
 }
 
-.Logo img{
-  width: 150px;
+.upperSectionNavbar a{
+  padding: 12px 0;
 }
 
 .Nav{
-  height: 48px;
+  max-width: 768px;
+  height: 64px;
 }
 
 /* .More-Categories{
@@ -27,15 +36,18 @@
 
 /*scrolled*/
 
-.scrolled{
-  background-color: #ffb300;
+.scrolled .Nav{
+  background-color: white;
   min-width: 768px;
   z-index: 1;
   position: fixed;
-  animation: moveDown 0.5s ease-in-out;
   box-shadow: 0 0 12px rgba(105, 105, 105);
   border-radius: 0 0 5px 5px;
 }
+
+/* .scrolled .upperSectionNavbar{
+  display: none;
+} */
 
 
 @keyframes moveDown {

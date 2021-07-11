@@ -1,25 +1,51 @@
 import React, { Component } from "react";
 import './Body.css';
-
+import mapping from "../Util/mapping";
 
 class Body extends Component{
-  state = {
-    category : []
+
+  constructor(props){
+    super(props);
+    this.state={ category:[], };
+  }
+
+  addToBookmark(newData){
+    const currentData = [];
+    currentData.push(newData);
+    localStorage.setItem('bookmarks', JSON.stringify(currentData));
   }
 
   async componentDidMount(){
+    console.log(this.props);
     try{
+      const categoryType = mapping(this.props.match.params.category) || 0;
       const res = await fetch('API.json');
       const data = await res.json();
-      const category = data.result.categories[0].templates[1].sections[0].articles;
+      const category = data.result.categories[categoryType].templates[1].sections[0].articles;
       this.setState({category : category});
       console.log(category);
+      console.log(data);
+    } catch(err){
+      console.log(err);
+    }
+  }
+
+  async componentDidUpdate(){
+    try{
+      const categoryType = mapping(this.props.match.params.category) || 0;
+      const res = await fetch('API.json');
+      const data = await res.json();
+      const category = data.result.categories[categoryType].templates[1].sections[0].articles;
+      this.setState({category : category});
+      console.log(category);
+      console.log(data);
     } catch(err){
       console.log(err);
     }
   }
 
   render(){
+    console.log(this.props);
     return(
       <div>
         <div className="content-body">
@@ -53,7 +79,7 @@ class Body extends Component{
                     <img src="./Society.jpg"/>
                     <h3 key={item.id}>{item.title}</h3>
                     <p>{item.publisher}</p>
-                    <a href="#">Bookmark</a>
+                  <button onClick={()=>this.addToBookmark({name:item.title, source:item.publisher})}>Bookmark</button>
                   </div>
                 </div>
               </a>

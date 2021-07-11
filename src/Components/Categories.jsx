@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './Categories.css';
-import Body from './Body';
+import {Link} from 'react-router-dom';
 
 class Categories extends Component{
-  state = {
-    category : []
+
+  constructor(props){
+    super(props);
+    this.state={ category:[], };
   }
 
   async componentDidMount(){
@@ -25,7 +27,7 @@ class Categories extends Component{
       <div className="Categories">
         {
           this.state.category.map((item)=>{
-            return <a key={item.id}>{item.name}</a>
+            return <Link to={`/${item.name}`} className ="nav-item" key={item.id}>{item.name}</Link>
           })
         }
       </div>
