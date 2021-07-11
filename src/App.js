@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Body from'./Components/Body';
 import Footer from './Components/Footer';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Bookmarks from './Components/Bookmarks';
 
 class App extends Component {
   constructor(props){
@@ -17,6 +18,7 @@ class App extends Component {
           <Header />
           <Switch>
             <Route path="/" exact component={Body}/>
+            <Route path="/bookmarks" exact component={Bookmarks}/>
             <Route path="/:category" exact component={Body}/>
           </Switch>
           <Footer />

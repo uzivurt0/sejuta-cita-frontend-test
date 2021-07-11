@@ -1,8 +1,36 @@
 .Footer{
   padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: lightgrey;
-  text-align: center;
-  color :rgb(143, 143, 143);
+}
+
+.footerLeftSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.footerRightSection{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.footerRightSection a{
+  margin: 2px 0;
+}
+
+.footerLogo{
+  width: 150px;
+  height: auto;
+}
+
+.footerLogo img{
+  width: 100%;
+  height: auto;
 }
 
 .Footer p{

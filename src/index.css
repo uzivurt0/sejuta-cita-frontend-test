@@ -8,8 +8,16 @@ body {
 }
 
 a{
+  font-weight: 600;
   text-decoration: none;
   color: black;
+  cursor:  pointer;
+  font-size: 14px;
+}
+
+a:hover{
+  color: darkgrey;
+  transition: .5s;
 }
 
 h3{

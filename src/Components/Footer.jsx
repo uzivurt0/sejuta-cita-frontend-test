@@ -9,7 +9,18 @@ class Footer extends Component{
   render(){
     return(
       <div className="Footer">
-        <p>&copy; Line Today</p>
+        <div className="footerLeftSection">
+          <div className="footerLogo">
+            <img src="LogoLineToday.png"/>
+          </div>
+          <p>&copy; Line Today</p>
+        </div>
+        <div className="footerRightSection">
+          <a href="https://www.instagram.com/linetoday/">Instagram</a>
+          <a href="https://www.youtube.com/channel/UCpMSd60UCwlrTCvB4U42MLA">Youtube</a>
+          <a href="https://twitter.com/linetoday">Twitter</a>
+          <a href="https://www.facebook.com/linetoday">Facebook</a>
+        </div>
       </div>
     )
   }

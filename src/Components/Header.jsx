@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Categories from './Categories';
 import './Header.css';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class Header extends Component{
@@ -36,7 +36,7 @@ class Header extends Component{
       <div className={`Header ${this.state.scrolled && 'scrolled'}`}>
         <div className="upperSectionNavbar"> 
           <img src="/LogoLineToday.png" alt="Logo" />
-          <a>Bookmark</a>
+          <Link to ="/bookmarks">Bookmark</Link>
         </div>
         <div className="Nav">
          <Categories />
